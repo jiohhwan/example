@@ -42,7 +42,7 @@ const mongoDB = () => {
 // 서버 시작
 mongoDB().then(() => {
   // mainUI.html 파일 서빙
-  app.get('/', (req, res) => {
+  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'html', 'mainUI.html'));
   });
 
